@@ -1,0 +1,94 @@
+.subfooter {
+  background: $Red;
+  text-align: center;
+  padding: 2em;
+
+  &__heading {
+    font-size: 1.3rem;
+    color: $LightGray;
+  }
+
+  &__btn {
+    padding: 2em 0;
+
+    .btn-primary {
+      @extend %btn;
+      background: $LightGray;
+      color: $Red;
+      @include trans;
+      &:hover {
+        @include trans;
+        background: darken($LightGray, 10%);
+      }
+    }
+  }
+}
+
+.wrapperfooter {
+  background: rgb(0, 0, 19);
+  padding: 2em;
+}
+.footer {
+  &__btn {
+    input {
+      padding: 1em 2em 1em 1em;
+      border-radius: 20px;
+      border: none;
+      margin-right: 0.5em;
+    }
+    input::placeholder {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $GrayishBlue;
+    }
+    .btnn {
+      margin-top: 1em;
+      display: inline-block;
+      padding: 0.5em 1.5em;
+      color: whitesmoke;
+      background: $Red;
+      font-weight: 500;
+      border-radius: 100px;
+      @include trans;
+      &:hover {
+        @include trans;
+        background: lighten($Red, 20%);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+    a {
+      color: whitesmoke;
+    }
+    .links1 + .links2 {
+      margin-left: 2em;
+    }
+  }
+
+  .socialmedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 10%;
+    }
+  }
+  .logo1 {
+    width: 50%;
+    margin: 2em auto;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .reserved {
+    color: $LightGray;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

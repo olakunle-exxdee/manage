@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+
+@import "./reset";
+@import "./variables";
+@import "./button";
+@import "./navbar";
+@import "./manage";
+@import "./review";
+@import "./footer";
+@import "./responsive";
+
+.hero {
+  margin: 2em 0;
+  &__img {
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    .heading {
+      max-width: 600px;
+      width: 100%;
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.25;
+      color: $Blue;
+    }
+    .paragraph {
+      max-width: 600px;
+      margin: 1em 0;
+      color: $GrayishBlue;
+    }
+
+    .btn-primary {
+      @extend %btn;
+      background: $Red;
+      color: whitesmoke;
+      @include trans;
+      &:hover {
+        @include trans;
+        background: lighten($Red, 20%);
+      }
+    }
+  }
+}
