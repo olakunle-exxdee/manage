@@ -5,7 +5,7 @@ const underlay = document.querySelector(".underlay");
 const hero__content = document.querySelector(".hero__content");
 const hero__img = document.querySelector(".hero__img");
 const manage__content = document.querySelector(".manage__content");
-const man = document.querySelector(".manage__content2");
+const manage = document.querySelector(".manage__content2");
 
 gsap.fromTo(
   ".hero__content",
@@ -15,7 +15,6 @@ gsap.fromTo(
 
 gsap.fromTo(
   ".manage__content",
-
   {
     scrollTrigger: {
       Trigger: ".manage__content",
@@ -33,6 +32,28 @@ gsap.fromTo(
     opacity: 1,
     ease: "power3.inOut",
     delay: 0.3,
+  }
+);
+gsap.fromTo(
+  ".manage",
+  {
+    scrollTrigger: {
+      Trigger: ".manage",
+      start: "top center",
+      toggleActions: "play none none none",
+    },
+    x: "-20rem",
+    opacity: 0,
+    screb: true,
+    pin: true,
+  },
+  {
+    scrollTrigger: ".manage",
+    x: 0,
+
+    opacity: 1,
+    ease: "power3.inOut",
+    delay: 0.7,
   }
 );
 
