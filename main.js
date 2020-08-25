@@ -35,14 +35,14 @@ gsap.fromTo(
   }
 );
 gsap.fromTo(
-  ".manage",
+  ".manage__content2",
   {
     scrollTrigger: {
-      Trigger: ".manage",
+      Trigger: ".manage__content2",
       start: "top center",
       toggleActions: "play none none none",
     },
-    x: "-20rem",
+    x: "20rem",
     opacity: 0,
     screb: true,
     pin: true,
